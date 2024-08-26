@@ -24,7 +24,7 @@ export function useBranch() {
     useEffect(() => {
         const fetchBranches = async () => {
             if (repo) {
-                // Reset branches and commits when the repo changes
+                // Reset the branch and commit states
                 setBranches([]);
                 setCommits([]);
                 setSelectedCommit(null);
@@ -50,6 +50,12 @@ export function useBranch() {
                 } catch (error) {
                     console.error('Error fetching branches:', error);
                 }
+            } else {
+                // If the repo is empty, reset the states
+                setBranches([]);
+                setCommits([]);
+                setSelectedCommit(null);
+                setValue('');
             }
         };
 
