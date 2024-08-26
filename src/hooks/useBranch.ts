@@ -1,4 +1,3 @@
-// hooks/useBranch.ts
 import { useState, useEffect, useMemo } from 'react';
 
 interface Branch {
@@ -25,6 +24,12 @@ export function useBranch() {
     useEffect(() => {
         const fetchBranches = async () => {
             if (repo) {
+                // Reset branches and commits when the repo changes
+                setBranches([]);
+                setCommits([]);
+                setSelectedCommit(null);
+                setValue('');
+
                 try {
                     const repoPath = repo.split('https://github.com/').reverse()[0].trim();
                     const response = await fetch(`https://api.github.com/repos/${repoPath}/branches`);
