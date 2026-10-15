@@ -28,7 +28,7 @@
     "lucide-react": "^0.436.0",
     "next": "14.2.6",
     "next-themes": "^0.3.0",
-    "react": "^18",
+    "react": "^19",
     "react-accessible-treeview": "^2.9.1",
     "react-dom": "^18",
     "react-resizable-panels": "^2.1.1",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/react": "^19",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.6",
